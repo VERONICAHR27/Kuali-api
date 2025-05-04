@@ -1,2 +1,2 @@
 # Kuali-api
-API para administrar clientes potenciales de ventas, empresas, plantillas, registros de contactos.
+API para administrar clientes, empresas, plantillas, registros de contactos.
