@@ -11,6 +11,11 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
+// Ruta de bienvenida
+app.get('/', (req, res) => {
+  res.redirect('/docs');
+});
+
 // --- RUTAS PARA COMPANIES ---
 app.get('/companies', async (req, res) => {
   try {

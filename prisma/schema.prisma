@@ -47,6 +47,7 @@ model Template {
   contacts   Contact[]
   createdAt  DateTime  @default(now())
   updatedAt  DateTime  @updatedAt
+  deletedAt    DateTime?
 }
 
 model Contact {
@@ -55,8 +56,6 @@ model Contact {
   leadId     String
   template   Template  @relation(fields: [templateId], references: [id])
   templateId String
-  sentAt     DateTime?
-  status     String?
   createdAt  DateTime  @default(now())
   updatedAt  DateTime  @updatedAt
 }
